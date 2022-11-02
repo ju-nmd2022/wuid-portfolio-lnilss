@@ -1,0 +1,60 @@
+* {
+  font-family: "Franklin Gothic Light", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  margin: 6rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  background-color: #ffe7e7;
+}
+
+h1 {
+  color: #9d0044;
+  text-align: center;
+  background-color: #ffcdcd;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+h1:hover {
+  color: #ed0067;
+}
+
+h2 {
+  color: #9d0044;
+}
+
+h2:hover {
+  color: #ed0067;
+}
+
+h3 {
+  color: #9d0044;
+}
+
+h3:hover {
+  color: #ed0067;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+img {
+  border-radius: 10px;
+  float: left;
+  position: static;
+  margin-right: 2rem;
+}
+
+.information {
+  position: sticky;
+  float: inline-end;
+}
+
+.column {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 20px;
+}
