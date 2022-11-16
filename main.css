@@ -29,70 +29,173 @@ h3:hover {
   color: #ed0067;
 }
 
-li:hover {
-  text-decoration: underline;
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.3fr 3fr 3fr 0.3fr;
+  grid-template-rows: 0.3fr 2fr 0.3fr;
+  margin: 10px;
+  gap: 25px;
+  border: 5px solid pink;
+  background-color: rgb(255, 239, 242);
 }
 
-@media (min-width: 50em) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 0.3fr 3fr 3fr 0.3fr;
-    grid-template-rows: 0.3fr 2fr 0.3fr;
-    margin: 10px;
-    gap: 25px;
-    border: 5px solid pink;
-    background-color: rgb(255, 239, 242);
-  }
+.head {
+  grid-area: 1 / 1 / 1 / 5;
+  background-color: pink;
+  text-align: center;
+}
+.my_image {
+  grid-area: 3 / 2 / 2 / 2;
+}
+.right_side {
+  grid-area: 2 / 3 / 2 / 3;
+}
+.foot {
+  grid-area: 3 / 1 / 3 / 5;
+  text-align: center;
+}
+.profile-image {
+  min-width: fit-content;
+}
 
-  .head {
-    grid-area: 1 / 1 / 1 / 5;
-    background-color: pink;
-    text-align: center;
-  }
-  .my_image {
-    grid-area: 3 / 2 / 2 / 2;
-  }
-  .right_side {
-    grid-area: 2 / 3 / 2 / 3;
-  }
-  .foot {
-    grid-area: 3 / 1 / 3 / 5;
-    text-align: center;
-  }
-  .profile-image {
-    min-width:fit-content;
+.wrapper_jkpg {
+  display: grid;
+  grid-template-columns: 0.3fr 3fr 3fr 0.3fr;
+  grid-template-rows: 0.1fr 0.5fr 0.1fr;
+  margin: 10px;
+  gap: 25px;
+  border: 5px solid pink;
+  background-color: rgb(255, 239, 242);
+}
+
+.head_jkpg {
+  grid-area: 1 / 1 / 1 / 5;
+  background-color: pink;
+  text-align: center;
+}
+
+.abt_jkpg {
+  grid-area: 2 / 2 / 2 / 3;
+}
+
+.jkpg_img {
+  grid-area: 2 / 2 / 2 / 3;
+}
+
+.bridge-img {
+  min-width: fit-content;
+}
+
+.todo {
+  grid-area: 2 / 3 / 2 / 3;
+}
+
+.foot_jkpg {
+  grid-area: 3 / 1 / 3 / 5;
+  text-align: center;
+}
+
+.flex-projects {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto 0;
+  padding-inline-start: 3em;
+  padding-inline-end: 3em;
+  gap: 10px;
+}
+
+.portfolio {
+  background-color: rgb(255, 239, 242);
+  position: relative;
+  align-items: center;
+  margin: 10px;
+  border: 5px solid pink;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.502);
+  opacity: 0%;
+  top: 0;
+  left: 0;
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+}
+
+.example {
+  position: relative;
+  height: 50vh;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.example:hover .overlay {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+.portfolio-pic {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.308);
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+  .example {
+    height: 20vh;
   }
 }
 
-@media (min-width: 50em) {
-  .wrapper_jkpg {
-    display: grid;
-    grid-template-columns: 0.3fr 3fr 3fr 0.3fr;
-    grid-template-rows: 0.1fr 0.5fr 0.1fr;
-    margin: 10px;
-    gap: 25px;
-    border: 5px solid pink;
-    background-color: rgb(255, 239, 242);
+@media screen and (max-height: 380px) {
+  .example {
+    height: 60vh;
   }
-  .head_jkpg {
-    grid-area: 1 / 1 / 1 / 5;
-    background-color: pink;
-    text-align: center;
+}
+
+/* Resize aspect code adapted from Tim Van Damme on css-tricks */
+
+.flex-jungwon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 50px;
+  gap: 50px;
+  background-color: rgb(255, 239, 242);
+  position: relative;
+  margin: auto 10px;
+  border: 5px solid pink;
+}
+
+.jungwon-pic {
+  flex-basis: 30%;
+  height: 90vh;
+  box-shadow: 1px 1px 10px 1px rgb(0, 0, 0, 0.308);
+}
+
+.jungwon-desc {
+  flex-basis: 50%;
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .jungwon-pic {
+    height: 50vh;
   }
-  .abt_jkpg {
-    grid-area: 2 / 2 / 2 / 3;
-  }
-  .jkpg_img {
-    grid-area: 2 / 2 / 2 / 3;
-  }
-  .bridge-img {
-    min-width:fit-content;
-  }
-  .todo {
-    grid-area: 2 / 3 / 2 / 3;
-  }
-  .foot_jkpg {
-    grid-area: 3 / 1 / 3 / 5;
-    text-align: center;
+}
+
+@media screen and (max-height: 400px) {
+  .jungwon-pic {
+    height: 60vh;
   }
 }
